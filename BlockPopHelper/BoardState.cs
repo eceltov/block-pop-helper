@@ -27,6 +27,8 @@ namespace BlockPopHelper
 
         public void MakeMoves(int remainingNestings)
         {
+            List<Task> tasks = new();
+
             for (int i = 0; i < groups.Count; i++)
             {
                 var chestOptions = groups[i].ChestSpawnOptions(blocks);
@@ -44,7 +46,13 @@ namespace BlockPopHelper
                     ResultCollector.Add(newState.result);
 
                     if (remainingNestings > 0)
-                        newState.MakeMoves(remainingNestings - 1);
+                    {
+                        if (remainingNestings % 2 == 0)
+                            tasks.Add(Task.Run(() => newState.MakeMoves(remainingNestings - 1)));
+                        else
+                            newState.MakeMoves(remainingNestings - 1);
+                    }
+
                 }
                 else
                 {
@@ -60,10 +68,17 @@ namespace BlockPopHelper
                         ResultCollector.Add(newState.result);
 
                         if (remainingNestings > 0)
-                            newState.MakeMoves(remainingNestings - 1);
+                        {
+                            if (remainingNestings % 2 == 0)
+                                tasks.Add(Task.Run(() => newState.MakeMoves(remainingNestings - 1)));
+                            else
+                                newState.MakeMoves(remainingNestings - 1);
+                        }
                     }
                 }
             }
+
+            Task.WaitAll(tasks.ToArray());
         }
 
         void PopGroup(ColorBlockGroup group, int x, int y)

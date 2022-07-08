@@ -35,7 +35,7 @@ namespace BlockPopHelper.Blocks
 
         public override void AddToResult(Result result)
         {
-            result.chests[Stars] += 1;
+            result.chests[Stars - 1] += 1;
         }
     }
 }

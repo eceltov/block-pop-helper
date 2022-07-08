@@ -56,13 +56,13 @@ namespace BlockPopHelper
 
             writer.WriteLine(movesString);
 
-            writer.WriteLine("----------------------------------");
+            writer.WriteLine("-----------------------------------");
         }
 
         public int tokens = 0;
         public int[] chests = new int[Constants.MaxChestStars];
         public int moves = 0;
 
-        string movesString = "Moves:";
+        public string movesString = "Moves:";
     }
 }
