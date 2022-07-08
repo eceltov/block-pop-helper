@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Match3Solver.Blocks
+namespace BlockPopHelper.Blocks
 {   
     class ColorBlock : Block
     {

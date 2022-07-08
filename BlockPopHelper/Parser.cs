@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Match3Solver.Blocks;
+using BlockPopHelper.Blocks;
 
-namespace Match3Solver
+namespace BlockPopHelper
 {
     static class Parser
     {

@@ -4,22 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Match3Solver.Blocks
+namespace BlockPopHelper.Blocks
 {
-    class TokenBlock : Block
+    class UnknownBlock : Block
     {
-        public TokenBlock(int x, int y)
+        public UnknownBlock(int x, int y)
         {
             Color = BlockColors.None;
-            Collectible = true;
+            Collectible = false;
             Poppable = false;
             X = x;
             Y = y;
-        }
-
-        public override void AddToResult(Result result)
-        {
-            result.tokens += 1;
         }
     }
 }

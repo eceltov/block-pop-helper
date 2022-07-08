@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-using Match3Solver.Blocks;
+using BlockPopHelper.Blocks;
 
-namespace Match3Solver
+namespace BlockPopHelper
 {
     class BoardState
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Match3Solver
+namespace BlockPopHelper
 {
     class Program
     {

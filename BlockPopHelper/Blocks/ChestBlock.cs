@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Match3Solver.Blocks
+namespace BlockPopHelper.Blocks
 {
     class ChestBlock : Block
     {
